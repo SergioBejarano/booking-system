@@ -53,3 +53,23 @@ The CRUD flow was validated against the Atlas cluster with Postman 11. Each scre
   ![PUT](https://github.com/user-attachments/assets/ed328cf1-4eb6-4679-aa7f-ea2f4e11f910)
 - **DELETE** – deletion returning `204 No Content`.
   ![DELETE](https://github.com/user-attachments/assets/78666272-d8db-4f0c-b0e9-167b71240c7b)
+
+## Security Layer
+
+- Added Spring Security + JWT to protect every business endpoint.
+- Passwords are stored hashed (BCrypt) before persisting the `users` collection.
+- JWT tokens are signed with HS256 (`jwt.secret`) and expire after `jwt.expiration` milliseconds (default 1h).
+
+### Public authentication endpoints
+
+| Method | Path                    | Description                                     |
+| ------ | ----------------------- | ----------------------------------------------- |
+| POST   | `/api/v1/auth/register` | Creates a user (no token required)              |
+| POST   | `/api/v1/auth/login`    | Returns `{ "token", "expiresIn" }` for the user |
+
+### How to call secured endpoints
+
+1. `POST /api/v1/auth/register` with `{ "name", "email", "password" }` to create credentials.
+2. `POST /api/v1/auth/login` with `{ "email", "password" }` to obtain the JWT.
+3. Include header `Authorization: Bearer <token>` in all `/api/v1/users/**` requests.
+4. On 401 responses, refresh the token (tokens expire after 1 hour by default).
