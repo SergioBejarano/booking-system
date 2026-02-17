@@ -74,7 +74,7 @@ The CRUD flow was validated against the Atlas cluster with Postman 11. Each scre
 3. Include header `Authorization: Bearer <token>` in all `/api/v1/users/**` requests.
 4. On 401 responses, refresh the token (tokens expire after 1 hour by default).
 
-Evidence - Postman
+## Evidence - Postman
 
 First, a user is registered.
 <img width="2116" height="1102" alt="Captura de pantalla 2026-02-16 204454" src="https://github.com/user-attachments/assets/94e5dc3b-0297-43c2-a1bf-337601126f05" />
@@ -86,4 +86,17 @@ Then log in with your credentials:
 And a query is made, indicating in the headers the authorization with the token generated previously during login.
 
 <img width="2117" height="1165" alt="Captura de pantalla 2026-02-16 210038" src="https://github.com/user-attachments/assets/1bd7ea59-16fd-4b5a-9f25-afbb502ecd4e" />
+
+
+
+## Unit Tests - Coverage
+
+
+<img width="2341" height="1230" alt="image" src="https://github.com/user-attachments/assets/5e24d029-0353-4da3-9a28-67a3dd0d471a" />
+
+The following image shows that coverage for each service is greater than 70%:
+
+<img width="2879" height="1292" alt="image" src="https://github.com/user-attachments/assets/3dcce2e1-412c-41f9-922f-732b063a7a6f" />
+
+
 
