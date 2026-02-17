@@ -73,3 +73,17 @@ The CRUD flow was validated against the Atlas cluster with Postman 11. Each scre
 2. `POST /api/v1/auth/login` with `{ "email", "password" }` to obtain the JWT.
 3. Include header `Authorization: Bearer <token>` in all `/api/v1/users/**` requests.
 4. On 401 responses, refresh the token (tokens expire after 1 hour by default).
+
+Evidence - Postman
+
+First, a user is registered.
+<img width="2116" height="1102" alt="Captura de pantalla 2026-02-16 204454" src="https://github.com/user-attachments/assets/94e5dc3b-0297-43c2-a1bf-337601126f05" />
+
+Then log in with your credentials:
+
+<img width="2116" height="1109" alt="Captura de pantalla 2026-02-16 205706" src="https://github.com/user-attachments/assets/3c7dffab-5677-4f80-86a0-2741262f72f4" />
+
+And a query is made, indicating in the headers the authorization with the token generated previously during login.
+
+<img width="2117" height="1165" alt="Captura de pantalla 2026-02-16 210038" src="https://github.com/user-attachments/assets/1bd7ea59-16fd-4b5a-9f25-afbb502ecd4e" />
+
