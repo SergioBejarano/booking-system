@@ -99,4 +99,9 @@ The following image shows that coverage for each service is greater than 70%:
 <img width="2879" height="1292" alt="image" src="https://github.com/user-attachments/assets/3dcce2e1-412c-41f9-922f-732b063a7a6f" />
 
 
+## Evidence of endpoint test with deployment URL
+
+<img width="2115" height="1315" alt="Captura de pantalla 2026-02-18 192401" src="https://github.com/user-attachments/assets/cb0c49a9-9854-448a-a1d6-360710d3fa54" />
+
+<img width="2878" height="1626" alt="image" src="https://github.com/user-attachments/assets/babe119f-1300-4f72-bfd6-959278d79ca0" />
 
